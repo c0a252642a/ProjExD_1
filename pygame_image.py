@@ -23,17 +23,19 @@ def main():
             if event.type == pg.QUIT: return
 
         key_lst = pg.key.get_pressed()
+
+        kk_rct.move_ip((1 if key_lst[pg.K_RIGHT] else -1)-key_lst[pg.K_LEFT], key_lst[pg.K_DOWN]-key_lst[pg.K_UP])
         # print(key_lst)
-        if key_lst[pg.K_UP]:
-            kk_rct.move_ip(0, -1)
-        if key_lst[pg.K_DOWN]:
-            kk_rct.move_ip(0, 1)
-        if key_lst[pg.K_LEFT]:
-            kk_rct.move_ip(-1, 0)
-        if key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip(1, 0)
-        else:
-            kk_rct.move_ip(-1, 0)
+        # if key_lst[pg.K_UP]:
+        #     kk_rct.move_ip(0, -1)
+        # if key_lst[pg.K_DOWN]:
+        #     kk_rct.move_ip(0, 1)
+        # if key_lst[pg.K_LEFT]:
+        #     kk_rct.move_ip(-1, 0)
+        # if key_lst[pg.K_RIGHT]:
+        #     kk_rct.move_ip(1, 0)
+        # else:
+        #     kk_rct.move_ip(-1, 0)
         
 
         x = tmr%3200
